@@ -4,6 +4,6 @@ package models
 
 type GetSpecificFriends struct {
 	ErrorMessage string `json:"error_message"`
-	ErrorCode int `json:"error_code"`
-	Error string `json:"error"`
+	ErrorCode    int    `json:"error_code"`
+	Error        string `json:"error"`
 }

@@ -2,64 +2,66 @@
 
 package models
 
+import "time"
+
 type GetFriendData struct {
 	Profiles []struct {
-		BgImageUrl2 string `json:"bg_image_url2"`
-		IsFavorite bool `json:"is_favorite"`
-		Gender string `json:"gender"`
-		BirthLeapType bool `json:"birth_leap_type"`
-		BirthType string `json:"birth_type"`
+		BgImageUrl2      string `json:"bg_image_url2"`
+		IsFavorite       bool   `json:"is_favorite"`
+		Gender           string `json:"gender"`
+		BirthLeapType    bool   `json:"birth_leap_type"`
+		BirthType        string `json:"birth_type"`
 		ProfileImageUrl2 string `json:"profile_image_url2"`
-		Type string `json:"type"`
-		FollowerCount int `json:"follower_count"`
-		Relation struct {
-			FeedBlocked bool `json:"feed_blocked"`
-			Friend string `json:"friend"`
-			Self bool `json:"self"`
-			Follow string `json:"follow"`
-			Favorite bool `json:"favorite"`
+		Type             string `json:"type"`
+		FollowerCount    int    `json:"follower_count"`
+		Relation         struct {
+			FeedBlocked bool   `json:"feed_blocked"`
+			Friend      string `json:"friend"`
+			Self        bool   `json:"self"`
+			Follow      string `json:"follow"`
+			Favorite    bool   `json:"favorite"`
 		} `json:"relation"`
-		IsCelebratable bool `json:"is_celebratable"`
-		DefaultBgId int `json:"default_bg_id"`
-		ActivityCount int `json:"activity_count"`
-		IsValidUser bool `json:"is_valid_user"`
-		ID string `json:"id"`
-		Relationship string `json:"relationship"`
-		Vip bool `json:"vip"`
-		FriendCount int `json:"friend_count"`
-		IsBirthday bool `json:"is_birthday"`
-		MessageRejectee bool `json:"message_rejectee"`
-		BgImageUrl string `json:"bg_image_url"`
-		AllowFollowing bool `json:"allow_following"`
+		IsCelebratable      bool   `json:"is_celebratable"`
+		DefaultBgId         int    `json:"default_bg_id"`
+		ActivityCount       int    `json:"activity_count"`
+		IsValidUser         bool   `json:"is_valid_user"`
+		ID                  string `json:"id"`
+		Relationship        string `json:"relationship"`
+		Vip                 bool   `json:"vip"`
+		FriendCount         int    `json:"friend_count"`
+		IsBirthday          bool   `json:"is_birthday"`
+		MessageRejectee     bool   `json:"message_rejectee"`
+		BgImageUrl          string `json:"bg_image_url"`
+		AllowFollowing      bool   `json:"allow_following"`
 		ProfileThumbnailUrl string `json:"profile_thumbnail_url"`
-		StatusObjects []struct {
+		StatusObjects       []struct {
 			ObjectType string `json:"object_type"`
-			Message string `json:"message"`
+			Message    string `json:"message"`
 		} `json:"status_objects"`
-		MessageSendable bool `json:"message_sendable"`
-		ProfileImageUrl string `json:"profile_image_url"`
-		DisplayName string `json:"display_name"`
-		Permalink string `json:"permalink"`
-		IsDefaultProfileImage bool `json:"is_default_profile_image"`
-		IsFeedBlocked bool `json:"is_feed_blocked"`
-		Birthday string `json:"birthday,omitempty"`
-		BirthdayLeft int `json:"birthday_left,omitempty"`
-		MessageReceivedBomb bool `json:"message_received_bomb,omitempty"`
-		Dormant bool `json:"dormant,omitempty"`
-		Blocked bool `json:"blocked,omitempty"`
-		ProfileVideoUrlHq string `json:"profile_video_url_hq,omitempty"`
-		ProfileVideoUrlSquareSmall string `json:"profile_video_url_square_small,omitempty"`
-		ProfileVideoUrlLq string `json:"profile_video_url_lq,omitempty"`
-		ProfileVideoUrlSquare string `json:"profile_video_url_square,omitempty"`
+		MessageSendable                 bool   `json:"message_sendable"`
+		ProfileImageUrl                 string `json:"profile_image_url"`
+		DisplayName                     string `json:"display_name"`
+		Permalink                       string `json:"permalink"`
+		IsDefaultProfileImage           bool   `json:"is_default_profile_image"`
+		IsFeedBlocked                   bool   `json:"is_feed_blocked"`
+		Birthday                        string `json:"birthday,omitempty"`
+		BirthdayLeft                    int    `json:"birthday_left,omitempty"`
+		MessageReceivedBomb             bool   `json:"message_received_bomb,omitempty"`
+		Dormant                         bool   `json:"dormant,omitempty"`
+		Blocked                         bool   `json:"blocked,omitempty"`
+		ProfileVideoUrlHq               string `json:"profile_video_url_hq,omitempty"`
+		ProfileVideoUrlSquareSmall      string `json:"profile_video_url_square_small,omitempty"`
+		ProfileVideoUrlLq               string `json:"profile_video_url_lq,omitempty"`
+		ProfileVideoUrlSquare           string `json:"profile_video_url_square,omitempty"`
 		ProfileVideoUrlSquareMicroSmall string `json:"profile_video_url_square_micro_small,omitempty"`
-		RecentlyWithFriendsPriority int64 `json:"recently_with_friends_priority,omitempty"`
-		ChannelObject struct {
-			Keywords []string `json:"keywords"`
-			Outlinks []interface{} `json:"outlinks"`
-			Certified bool `json:"certified"`
-			Category string `json:"category"`
-			FollowerCount int `json:"follower_count"`
-			StartDate time.Time `json:"start_date"`
+		RecentlyWithFriendsPriority     int64  `json:"recently_with_friends_priority,omitempty"`
+		ChannelObject                   struct {
+			Keywords      []string      `json:"keywords"`
+			Outlinks      []interface{} `json:"outlinks"`
+			Certified     bool          `json:"certified"`
+			Category      string        `json:"category"`
+			FollowerCount int           `json:"follower_count"`
+			StartDate     time.Time     `json:"start_date"`
 		} `json:"channel_object,omitempty"`
 		MessageReceiverPriority int64 `json:"message_receiver_priority,omitempty"`
 	} `json:"profiles"`

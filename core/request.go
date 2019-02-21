@@ -9,6 +9,7 @@ import (
 	"net/url"
 
 	"github.com/rs/xid"
+	"github.com/sooid/Kakaostory-Manager-Cli/core/models"
 	"golang.org/x/net/publicsuffix"
 )
 
@@ -79,8 +80,8 @@ func (kr *KakaoRequest) Request(URL string, Method string, obj interface{}) erro
 }
 
 // FIX THIS!
-func (kr *KakaoRequest) GetProfile(id string) *Profiles {
-	profile := new(Profiles)
+func (kr *KakaoRequest) GetProfile(id string) *models.GetProfile {
+	profile := new(models.GetProfile)
 	if err := kr.Request(APIS["PROFILE"].URL+id, APIS["PROFILE"].Method, profile); err != nil {
 		log.Fatal(err)
 		return nil
@@ -89,8 +90,8 @@ func (kr *KakaoRequest) GetProfile(id string) *Profiles {
 	return profile
 }
 
-func (kr *KakaoRequest) GetFeeds() *Feeds {
-	feeds := new(Feeds)
+func (kr *KakaoRequest) GetFeeds() *models.GetFeed {
+	feeds := new(models.GetFeed)
 	if err := kr.Request(APIS["FEEDS"].URL, APIS["FEEDS"].Method, feeds); err != nil {
 		log.Fatal(err)
 		return nil

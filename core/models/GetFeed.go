@@ -2,233 +2,235 @@
 
 package models
 
+import "time"
+
 type GetFeed struct {
 	Campaigns []interface{} `json:"campaigns"`
-	Feeds []struct {
-		CommentCount int `json:"comment_count"`
-		Downloadable bool `json:"downloadable"`
-		Pinned bool `json:"pinned"`
-		IsMustRead bool `json:"is_must_read,omitempty"`
-		Iid string `json:"iid"`
-		Deletable bool `json:"deletable"`
-		CreatedAt time.Time `json:"created_at"`
-		WithTagCount int `json:"with_tag_count"`
-		Sharable bool `json:"sharable"`
-		Content string `json:"content"`
-		Required bool `json:"required"`
-		Liked bool `json:"liked"`
-		FeedId string `json:"feed_id"`
-		Sid string `json:"sid"`
-		Sympathized bool `json:"sympathized"`
-		UpdatedAt time.Time `json:"updated_at"`
-		MediaType string `json:"media_type,omitempty"`
-		ActivityType string `json:"activity_type"`
-		ID string `json:"id"`
-		Modifiable bool `json:"modifiable"`
+	Feeds     []struct {
+		CommentCount      int       `json:"comment_count"`
+		Downloadable      bool      `json:"downloadable"`
+		Pinned            bool      `json:"pinned"`
+		IsMustRead        bool      `json:"is_must_read,omitempty"`
+		Iid               string    `json:"iid"`
+		Deletable         bool      `json:"deletable"`
+		CreatedAt         time.Time `json:"created_at"`
+		WithTagCount      int       `json:"with_tag_count"`
+		Sharable          bool      `json:"sharable"`
+		Content           string    `json:"content"`
+		Required          bool      `json:"required"`
+		Liked             bool      `json:"liked"`
+		FeedId            string    `json:"feed_id"`
+		Sid               string    `json:"sid"`
+		Sympathized       bool      `json:"sympathized"`
+		UpdatedAt         time.Time `json:"updated_at"`
+		MediaType         string    `json:"media_type,omitempty"`
+		ActivityType      string    `json:"activity_type"`
+		ID                string    `json:"id"`
+		Modifiable        bool      `json:"modifiable"`
 		ContentDecorators []struct {
 			Text string `json:"text"`
 			Type string `json:"type"`
 		} `json:"content_decorators"`
-		Blinded bool `json:"blinded"`
-		Likes []interface{} `json:"likes"`
-		Summary string `json:"summary"`
-		LikeCount int `json:"like_count"`
-		Comments []interface{} `json:"comments"`
-		Bookmarked bool `json:"bookmarked"`
-		Verb string `json:"verb"`
-		Permission string `json:"permission"`
-		CommentAllWritable bool `json:"comment_all_writable"`
-		HasUnreadReaction bool `json:"has_unread_reaction"`
-		ShareCount int `json:"share_count"`
-		Actor struct {
-			Birthday string `json:"birthday"`
-			BgImageUrl2 string `json:"bg_image_url2"`
-			IsFavorite bool `json:"is_favorite"`
-			BirthdayLeft int `json:"birthday_left"`
-			Gender string `json:"gender"`
-			BirthLeapType bool `json:"birth_leap_type"`
-			BirthType string `json:"birth_type"`
+		Blinded            bool          `json:"blinded"`
+		Likes              []interface{} `json:"likes"`
+		Summary            string        `json:"summary"`
+		LikeCount          int           `json:"like_count"`
+		Comments           []interface{} `json:"comments"`
+		Bookmarked         bool          `json:"bookmarked"`
+		Verb               string        `json:"verb"`
+		Permission         string        `json:"permission"`
+		CommentAllWritable bool          `json:"comment_all_writable"`
+		HasUnreadReaction  bool          `json:"has_unread_reaction"`
+		ShareCount         int           `json:"share_count"`
+		Actor              struct {
+			Birthday         string `json:"birthday"`
+			BgImageUrl2      string `json:"bg_image_url2"`
+			IsFavorite       bool   `json:"is_favorite"`
+			BirthdayLeft     int    `json:"birthday_left"`
+			Gender           string `json:"gender"`
+			BirthLeapType    bool   `json:"birth_leap_type"`
+			BirthType        string `json:"birth_type"`
 			ProfileImageUrl2 string `json:"profile_image_url2"`
-			Type string `json:"type"`
-			FollowerCount int `json:"follower_count"`
-			Relation struct {
-				FeedBlocked bool `json:"feed_blocked"`
-				Friend string `json:"friend"`
-				Self bool `json:"self"`
-				Follow string `json:"follow"`
-				Favorite bool `json:"favorite"`
+			Type             string `json:"type"`
+			FollowerCount    int    `json:"follower_count"`
+			Relation         struct {
+				FeedBlocked bool   `json:"feed_blocked"`
+				Friend      string `json:"friend"`
+				Self        bool   `json:"self"`
+				Follow      string `json:"follow"`
+				Favorite    bool   `json:"favorite"`
 			} `json:"relation"`
-			IsCelebratable bool `json:"is_celebratable"`
-			DefaultBgId int `json:"default_bg_id"`
-			ActivityCount int `json:"activity_count"`
-			IsValidUser bool `json:"is_valid_user"`
-			ID string `json:"id"`
-			Relationship string `json:"relationship"`
-			Vip bool `json:"vip"`
-			FriendCount int `json:"friend_count"`
-			IsBirthday bool `json:"is_birthday"`
-			BgImageUrl string `json:"bg_image_url"`
-			AllowFollowing bool `json:"allow_following"`
+			IsCelebratable      bool   `json:"is_celebratable"`
+			DefaultBgId         int    `json:"default_bg_id"`
+			ActivityCount       int    `json:"activity_count"`
+			IsValidUser         bool   `json:"is_valid_user"`
+			ID                  string `json:"id"`
+			Relationship        string `json:"relationship"`
+			Vip                 bool   `json:"vip"`
+			FriendCount         int    `json:"friend_count"`
+			IsBirthday          bool   `json:"is_birthday"`
+			BgImageUrl          string `json:"bg_image_url"`
+			AllowFollowing      bool   `json:"allow_following"`
 			ProfileThumbnailUrl string `json:"profile_thumbnail_url"`
-			StatusObjects []struct {
+			StatusObjects       []struct {
 				ObjectType string `json:"object_type"`
-				Message string `json:"message"`
+				Message    string `json:"message"`
 			} `json:"status_objects"`
-			ProfileImageUrl string `json:"profile_image_url"`
-			DisplayName string `json:"display_name"`
-			Permalink string `json:"permalink"`
-			IsDefaultProfileImage bool `json:"is_default_profile_image"`
-			IsFeedBlocked bool `json:"is_feed_blocked"`
+			ProfileImageUrl       string `json:"profile_image_url"`
+			DisplayName           string `json:"display_name"`
+			Permalink             string `json:"permalink"`
+			IsDefaultProfileImage bool   `json:"is_default_profile_image"`
+			IsFeedBlocked         bool   `json:"is_feed_blocked"`
 		} `json:"actor"`
 		LatestFriendEmotion []interface{} `json:"latest_friend_emotion"`
-		PushMute bool `json:"push_mute"`
-		WithMe bool `json:"with_me"`
-		SympathyCount int `json:"sympathy_count"`
-		LatestComments []interface{} `json:"latest_comments"`
-		Permalink string `json:"permalink"`
-		ViewCount int `json:"view_count"`
-		Object struct {
-			CommentCount int `json:"comment_count"`
-			Downloadable bool `json:"downloadable"`
-			Pinned bool `json:"pinned"`
-			CreatedAt time.Time `json:"created_at"`
-			WithTagCount int `json:"with_tag_count"`
-			Sharable bool `json:"sharable"`
-			Media []struct {
-				URL string `json:"url"`
+		PushMute            bool          `json:"push_mute"`
+		WithMe              bool          `json:"with_me"`
+		SympathyCount       int           `json:"sympathy_count"`
+		LatestComments      []interface{} `json:"latest_comments"`
+		Permalink           string        `json:"permalink"`
+		ViewCount           int           `json:"view_count"`
+		Object              struct {
+			CommentCount int       `json:"comment_count"`
+			Downloadable bool      `json:"downloadable"`
+			Pinned       bool      `json:"pinned"`
+			CreatedAt    time.Time `json:"created_at"`
+			WithTagCount int       `json:"with_tag_count"`
+			Sharable     bool      `json:"sharable"`
+			Media        []struct {
+				URL           string `json:"url"`
 				ThumbnailUrl2 string `json:"thumbnail_url2"`
 				ThumbnailUrl3 string `json:"thumbnail_url3"`
-				ThumbnailUrl string `json:"thumbnail_url"`
-				OriginUrl string `json:"origin_url"`
-				URL2 string `json:"url2"`
-				JpgUrl string `json:"jpg_url"`
-				Key string `json:"key"`
-				ContentType string `json:"content_type"`
-				Width int `json:"width"`
-				Height int `json:"height"`
-				MediaPath string `json:"media_path"`
-				SqUrl string `json:"sq_url"`
+				ThumbnailUrl  string `json:"thumbnail_url"`
+				OriginUrl     string `json:"origin_url"`
+				URL2          string `json:"url2"`
+				JpgUrl        string `json:"jpg_url"`
+				Key           string `json:"key"`
+				ContentType   string `json:"content_type"`
+				Width         int    `json:"width"`
+				Height        int    `json:"height"`
+				MediaPath     string `json:"media_path"`
+				SqUrl         string `json:"sq_url"`
 			} `json:"media"`
-			Content string `json:"content"`
-			Required bool `json:"required"`
-			Liked bool `json:"liked"`
-			Sid string `json:"sid"`
-			Sympathized bool `json:"sympathized"`
-			UpdatedAt time.Time `json:"updated_at"`
-			MediaType string `json:"media_type"`
-			ActivityType string `json:"activity_type"`
-			ID string `json:"id"`
-			Modifiable bool `json:"modifiable"`
-			Blinded bool `json:"blinded"`
+			Content           string    `json:"content"`
+			Required          bool      `json:"required"`
+			Liked             bool      `json:"liked"`
+			Sid               string    `json:"sid"`
+			Sympathized       bool      `json:"sympathized"`
+			UpdatedAt         time.Time `json:"updated_at"`
+			MediaType         string    `json:"media_type"`
+			ActivityType      string    `json:"activity_type"`
+			ID                string    `json:"id"`
+			Modifiable        bool      `json:"modifiable"`
+			Blinded           bool      `json:"blinded"`
 			ContentDecorators []struct {
 				Text string `json:"text"`
 				Type string `json:"type"`
 			} `json:"content_decorators"`
-			ActivityTitle string `json:"activity_title"`
-			Summary string `json:"summary"`
-			LikeCount int `json:"like_count"`
-			ObjectType string `json:"object_type"`
-			Verb string `json:"verb"`
-			Permission string `json:"permission"`
-			CommentAllWritable bool `json:"comment_all_writable"`
-			HasUnreadReaction bool `json:"has_unread_reaction"`
-			ShareCount int `json:"share_count"`
-			Actor struct {
-				BgImageUrl2 string `json:"bg_image_url2"`
-				IsFavorite bool `json:"is_favorite"`
-				Gender string `json:"gender"`
-				BirthLeapType bool `json:"birth_leap_type"`
-				BirthType string `json:"birth_type"`
+			ActivityTitle      string `json:"activity_title"`
+			Summary            string `json:"summary"`
+			LikeCount          int    `json:"like_count"`
+			ObjectType         string `json:"object_type"`
+			Verb               string `json:"verb"`
+			Permission         string `json:"permission"`
+			CommentAllWritable bool   `json:"comment_all_writable"`
+			HasUnreadReaction  bool   `json:"has_unread_reaction"`
+			ShareCount         int    `json:"share_count"`
+			Actor              struct {
+				BgImageUrl2      string `json:"bg_image_url2"`
+				IsFavorite       bool   `json:"is_favorite"`
+				Gender           string `json:"gender"`
+				BirthLeapType    bool   `json:"birth_leap_type"`
+				BirthType        string `json:"birth_type"`
 				ProfileImageUrl2 string `json:"profile_image_url2"`
-				Type string `json:"type"`
-				FollowerCount int `json:"follower_count"`
-				Relation struct {
-					FeedBlocked bool `json:"feed_blocked"`
-					Friend string `json:"friend"`
-					Self bool `json:"self"`
-					Follow string `json:"follow"`
-					Favorite bool `json:"favorite"`
+				Type             string `json:"type"`
+				FollowerCount    int    `json:"follower_count"`
+				Relation         struct {
+					FeedBlocked bool   `json:"feed_blocked"`
+					Friend      string `json:"friend"`
+					Self        bool   `json:"self"`
+					Follow      string `json:"follow"`
+					Favorite    bool   `json:"favorite"`
 				} `json:"relation"`
-				IsCelebratable bool `json:"is_celebratable"`
-				DefaultBgId int `json:"default_bg_id"`
-				ActivityCount int `json:"activity_count"`
-				IsValidUser bool `json:"is_valid_user"`
-				ID string `json:"id"`
-				Relationship string `json:"relationship"`
-				Vip bool `json:"vip"`
-				FriendCount int `json:"friend_count"`
-				IsBirthday bool `json:"is_birthday"`
-				BgImageUrl string `json:"bg_image_url"`
-				AllowFollowing bool `json:"allow_following"`
+				IsCelebratable      bool   `json:"is_celebratable"`
+				DefaultBgId         int    `json:"default_bg_id"`
+				ActivityCount       int    `json:"activity_count"`
+				IsValidUser         bool   `json:"is_valid_user"`
+				ID                  string `json:"id"`
+				Relationship        string `json:"relationship"`
+				Vip                 bool   `json:"vip"`
+				FriendCount         int    `json:"friend_count"`
+				IsBirthday          bool   `json:"is_birthday"`
+				BgImageUrl          string `json:"bg_image_url"`
+				AllowFollowing      bool   `json:"allow_following"`
 				ProfileThumbnailUrl string `json:"profile_thumbnail_url"`
-				StatusObjects []struct {
+				StatusObjects       []struct {
 					ObjectType string `json:"object_type"`
-					Message string `json:"message"`
+					Message    string `json:"message"`
 				} `json:"status_objects"`
 				ChannelObject struct {
-					SiteUrl string `json:"site_url"`
+					SiteUrl  string   `json:"site_url"`
 					Keywords []string `json:"keywords"`
-					Phone string `json:"phone"`
-					Bizinfo struct {
+					Phone    string   `json:"phone"`
+					Bizinfo  struct {
 						AgreementOutlink string `json:"agreement_outlink"`
-						BizNumber string `json:"biz_number"`
-						Address string `json:"address"`
-						OwnerName string `json:"owner_name"`
-						Phone string `json:"phone"`
-						SellerType int `json:"seller_type"`
-						BizName string `json:"biz_name"`
-						RefUrl string `json:"ref_url"`
-						ReportNo string `json:"report_no"`
-						Email string `json:"email"`
+						BizNumber        string `json:"biz_number"`
+						Address          string `json:"address"`
+						OwnerName        string `json:"owner_name"`
+						Phone            string `json:"phone"`
+						SellerType       int    `json:"seller_type"`
+						BizName          string `json:"biz_name"`
+						RefUrl           string `json:"ref_url"`
+						ReportNo         string `json:"report_no"`
+						Email            string `json:"email"`
 					} `json:"bizinfo"`
-					Outlinks []interface{} `json:"outlinks"`
-					Certified bool `json:"certified"`
-					Category string `json:"category"`
-					FollowerCount int `json:"follower_count"`
-					Email string `json:"email"`
-					StartDate time.Time `json:"start_date"`
+					Outlinks      []interface{} `json:"outlinks"`
+					Certified     bool          `json:"certified"`
+					Category      string        `json:"category"`
+					FollowerCount int           `json:"follower_count"`
+					Email         string        `json:"email"`
+					StartDate     time.Time     `json:"start_date"`
 				} `json:"channel_object"`
-				ProfileImageUrl string `json:"profile_image_url"`
-				DisplayName string `json:"display_name"`
-				Permalink string `json:"permalink"`
-				IsDefaultProfileImage bool `json:"is_default_profile_image"`
-				IsFeedBlocked bool `json:"is_feed_blocked"`
+				ProfileImageUrl       string `json:"profile_image_url"`
+				DisplayName           string `json:"display_name"`
+				Permalink             string `json:"permalink"`
+				IsDefaultProfileImage bool   `json:"is_default_profile_image"`
+				IsFeedBlocked         bool   `json:"is_feed_blocked"`
 			} `json:"actor"`
-			PushMute bool `json:"push_mute"`
-			Deleted bool `json:"deleted"`
-			WithMe bool `json:"with_me"`
-			PlusSubscribed bool `json:"plus_subscribed"`
-			SympathyCount int `json:"sympathy_count"`
-			Permalink string `json:"permalink"`
-			ViewCount int `json:"view_count"`
+			PushMute       bool   `json:"push_mute"`
+			Deleted        bool   `json:"deleted"`
+			WithMe         bool   `json:"with_me"`
+			PlusSubscribed bool   `json:"plus_subscribed"`
+			SympathyCount  int    `json:"sympathy_count"`
+			Permalink      string `json:"permalink"`
+			ViewCount      int    `json:"view_count"`
 		} `json:"object,omitempty"`
 		Media []struct {
-			URL string `json:"url"`
+			URL           string `json:"url"`
 			ThumbnailUrl2 string `json:"thumbnail_url2"`
 			ThumbnailUrl3 string `json:"thumbnail_url3"`
-			ThumbnailUrl string `json:"thumbnail_url"`
-			OriginUrl string `json:"origin_url"`
-			URL2 string `json:"url2"`
-			JpgUrl string `json:"jpg_url"`
-			Key string `json:"key"`
-			ContentType string `json:"content_type"`
-			Width int `json:"width"`
-			Height int `json:"height"`
-			MediaPath string `json:"media_path"`
-			SqUrl string `json:"sq_url"`
+			ThumbnailUrl  string `json:"thumbnail_url"`
+			OriginUrl     string `json:"origin_url"`
+			URL2          string `json:"url2"`
+			JpgUrl        string `json:"jpg_url"`
+			Key           string `json:"key"`
+			ContentType   string `json:"content_type"`
+			Width         int    `json:"width"`
+			Height        int    `json:"height"`
+			MediaPath     string `json:"media_path"`
+			SqUrl         string `json:"sq_url"`
 		} `json:"media,omitempty"`
 		Scrap struct {
-			Title string `json:"title"`
-			Description string `json:"description"`
-			URL string `json:"url"`
-			Type string `json:"type"`
-			IsOpengraph bool `json:"is_opengraph"`
-			Host string `json:"host"`
-			RequestedUrl string `json:"requested_url"`
-			Image []string `json:"image"`
-			SiteName string `json:"site_name"`
-			Section string `json:"section"`
-			DestUrl string `json:"dest_url"`
+			Title        string   `json:"title"`
+			Description  string   `json:"description"`
+			URL          string   `json:"url"`
+			Type         string   `json:"type"`
+			IsOpengraph  bool     `json:"is_opengraph"`
+			Host         string   `json:"host"`
+			RequestedUrl string   `json:"requested_url"`
+			Image        []string `json:"image"`
+			SiteName     string   `json:"site_name"`
+			Section      string   `json:"section"`
+			DestUrl      string   `json:"dest_url"`
 		} `json:"scrap,omitempty"`
 	} `json:"feeds"`
 	NextSince string `json:"next_since"`

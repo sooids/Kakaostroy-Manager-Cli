@@ -1,0 +1,3 @@
+[submodule "core/script/golang-json-converter"]
+	path = core/script/golang-json-converter
+	url = https://github.com/sooids/golang-json-converter.git
